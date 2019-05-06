@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+             body
+         {
+         	margin: 0px;
+                background-image: url("b2.jpg");
+
+         }
+          .main
+       {
+       	position:relative;
+       	top:70px;
+       	left:400px;
+       	width:600px;
+       	height:475px;
+       	background-color:#c6ffb3;
+       	padding:20px;
+       	box-sizing:border-box;
+        margin-top: 0;
+       } 
+      .main{
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+}
+
+            input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+input[type=text], select, textarea {
+  width:60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+  input[type=password], select, textarea {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  }
+  .btn
+       {
+       	width: 50%;
+		background-color:dodgerblue;
+		color: white;
+		border: none;
+		padding: 12px 24px;
+               
+		cursor: pointer;
+        float: left;
+
+       }
+       .btn:hover
+       {
+       	transition-duration:1s;
+       	transform:translate(0px,-5px);
+       	box-shadow:0px 10px 30px black;              
+       }
+       .btnn{
+text-align: left;
+padding: 12px 24px;
+}
+button[type=submit] {
+width:35%;
+background: #f47721;
+outline: none;
+color: #fff;
+font-size: 13px;
+border: none;
+padding: 14px 6px;
+letter-spacing: 1px;
+text-transform: uppercase;
+cursor: pointer;
+transition: 0.5s all;
+
+}
+button[type=submit]:hover{background:#000;
+color:#fff;}
+.form{
+    margin-top: 0px;
+    
+}
+.dropdown{
+     width:65%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+</style>
+    </head>  
+    <body>
+        <div class="main">
+    <div class="form">
+        <h1><p align="center">Login form</p></h1>
+        
+        <form action="log" name="MyForm" method="get" align="center" onsubmit="return myValidation">
+            <button class="btn"><b>Login</b></button>
+            <button class="btn"><b>Sign Up</b></button><br><br><br><br>
+             
+             <b>Username:</b><input type="text" name="username" placeholder="User name"><br><br>
+             <b>Password:</b><input type="password" placeholder="Password" name="password" ><br><br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="usertype" class="dropdown">
+    <option value="student">Student</option>
+    <option value="faculty">Faculty</option>
+    <option value="admin">Admin</option>
+             </select><br><br>
+            <div class="btnn">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<center><button type="submit">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">Forget Password</button><br>
+                   
+            </div>
+            <div style="clear: both;"></div>
+    </div>
+  </div>
+        
+        <script> function myFunction() {
+            var x = document.getElementById("myInput"); 
+            if (x.type === "password") 
+            { x.type = "text"; 
+            } else 
+            { x.type = "password"; 
+            } }
+        function myValidation(){ 
+            console.log("myvalidation"); 
+            var element1=document.forms["MyForm"]["username"].value;
+            var element2=document.forms["MyForm"]["password"].value; 
+            var flag = true; if(element1==""){ alert("Name cannot be empty"); 
+                flag = false;
+            } if(element2==""){ alert("password cannot be empty"); 
+                flag = false; 
+            } return flag; 
+        } </script>
+    </body>
+</html>
